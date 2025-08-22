@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 
 #Cria uma instância da aplicação Flask e guarda em app.
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 #Função que será executada quando a rota / for acessada.
 def home():
-    return 'Hello World!'
+    return render_template('index.html')
 
 #garante que o código dentro só rode quando você executar este arquivo diretamente
 if __name__ == "__main__":
